@@ -1125,21 +1125,22 @@ def run(
             coverage_png,
             plddt_png,
         ]
-        for i in model_rank:
+        
+        for n, key in enumerate(model_rank):
             result_files.append(
                 result_dir.joinpath(
-                    f"{jobname}_unrelaxed_rank_{i + 1}_{outs[i]['model_name']}.pdb"
+                    f"{jobname}_unrelaxed_rank_{n + 1}_{outs[key]['model_name']}.pdb"
                 )
             )
             result_files.append(
                 result_dir.joinpath(
-                    f"{jobname}_unrelaxed_rank_{i + 1}_{outs[i]['model_name']}_scores.json"
+                    f"{jobname}_unrelaxed_rank_{n + 1}_{outs[key]['model_name']}_scores.json"
                 )
             )
             if use_amber:
                 result_files.append(
                     result_dir.joinpath(
-                        f"{jobname}_relaxed_rank_{i + 1}_{outs[i]['model_name']}.pdb"
+                        f"{jobname}_relaxed_rank_{n + 1}_{outs[key]['model_name']}.pdb"
                     )
                 )
 
