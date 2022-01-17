@@ -5,6 +5,7 @@ import random
 import sys
 import time
 import zipfile
+import pdb
 from argparse import ArgumentParser
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
@@ -985,6 +986,7 @@ def run(
     )
 
     crop_len = 0
+    pdb.set_trace()
     for job_number, (raw_jobname, query_sequence, a3m_lines) in enumerate(queries):
         jobname = safe_filename(raw_jobname)
         # In the colab version and with --zip we know we're done when a zip file has been written
