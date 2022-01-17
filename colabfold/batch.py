@@ -167,7 +167,7 @@ def predict_structure(
         # score complexes by ptmscore and sequences by plddt
         rank_by = "plddt" if not is_complex else "ptmscore"
     logger.info(
-            f"Query {result_dir+"is_complex"+is_complex+model_runner_and_params}
+            f"Query {result_dir}, is_complex {is_complex}, {model_runner_and_params}"
         )
     plddts, paes, ptmscore = [], [], []
     max_paes = []
