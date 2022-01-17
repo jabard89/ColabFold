@@ -292,8 +292,8 @@ def predict_structure(
             # TODO: Those aren't actually used in batch
             relaxed_pdb_lines.append(relaxed_pdb_str)
         # early stop criteria fulfilled
-        if mean_score > stop_at_score:
-            break
+        #if mean_score > stop_at_score:
+        #    break
     # rerank models based on predicted lddt
     if rank_by == "ptmscore":
         model_rank = np.array(ptmscore).argsort()[::-1]
